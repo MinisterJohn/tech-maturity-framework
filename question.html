@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME Technical Maturity Assessment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">SME Technical Maturity Assessment</h2>
+    <form id="maturityForm">
+        <!-- Section 1: Leadership and Vision -->
+        <div id="question-1" class="question active">
+            <label for="q1">How important is having a clear technological vision and strategy for SMEs?</label>
+            <select class="form-select" id="q1" required>
+                <option value="1">Not Important</option>
+                <option value="2">Slightly Important</option>
+                <option value="3">Moderately Important</option>
+                <option value="4">Very Important</option>
+                <option value="5">Extremely Important</option>
+            </select>
+        </div>
+
+        <div id="question-2" class="question">
+            <label for="q2">What role does leadership play in driving technological advancements within SMEs?</label>
+            <select class="form-select" id="q2" required>
+                <option value="1">No Role</option>
+                <option value="2">Minor Role</option>
+                <option value="3">Moderate Role</option>
+                <option value="4">Major Role</option>
+                <option value="5">Critical Role</option>
+            </select>
+        </div>
+
+        <div id="question-3" class="question">
+            <label for="q3">How often does your organization review and update its technology strategy?</label>
+            <select class="form-select" id="q3" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Occasionally</option>
+                <option value="4">Frequently</option>
+                <option value="5">Always</option>
+            </select>
+        </div>
+
+        <!-- Section 2: Innovation and Technology Adoption -->
+        <div id="question-4" class="question">
+            <label for="q4">How open is your organization to adopting new technologies?</label>
+            <select class="form-select" id="q4" required>
+                <option value="1">Not Open</option>
+                <option value="2">Slightly Open</option>
+                <option value="3">Moderately Open</option>
+                <option value="4">Very Open</option>
+                <option value="5">Completely Open</option>
+            </select>
+        </div>
+
+        <div id="question-5" class="question">
+            <label for="q5">What are the major barriers to technology adoption in your organization?</label>
+            <select class="form-select" id="q5" required>
+                <option value="1">Financial Constraints</option>
+                <option value="2">Lack of Expertise</option>
+                <option value="3">Resistance to Change</option>
+                <option value="4">Regulatory Issues</option>
+                <option value="5">Other</option>
+            </select>
+        </div>
+
+        <div id="question-6" class="question">
+            <label for="q6">How frequently does your organization invest in new technological solutions?</label>
+            <select class="form-select" id="q6" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Occasionally</option>
+                <option value="4">Frequently</option>
+                <option value="5">Always</option>
+            </select>
+        </div>
+
+        <!-- Section 3: Employee Skills and Training -->
+        <div id="question-7" class="question">
+            <label for="q7">How would you assess the current skill level of your employees in terms of technology use?</label>
+            <select class="form-select" id="q7" required>
+                <option value="1">Very Low</option>
+                <option value="2">Low</option>
+                <option value="3">Moderate</option>
+                <option value="4">High</option>
+                <option value="5">Very High</option>
+            </select>
+        </div>
+
+        <div id="question-8" class="question">
+            <label for="q8">How often does your organization provide training and development programs related to technology?</label>
+            <select class="form-select" id="q8" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Occasionally</option>
+                <option value="4">Frequently</option>
+                <option value="5">Always</option>
+            </select>
+        </div>
+
+        <div id="question-9" class="question">
+            <label for="q9">What types of technological training do you believe are most beneficial for SMEs?</label>
+            <select class="form-select" id="q9" required>
+                <option value="1">Basic Computer Skills</option>
+                <option value="2">Advanced Software Training</option>
+                <option value="3">Cybersecurity Training</option>
+                <option value="4">Data Analytics Training</option>
+                <option value="5">Other</option>
+            </select>
+        </div>
+
+        <!-- Section 4: Organizational Structure and Processes -->
+        <div id="question-10" class="question">
+            <label for="q10">How well are your organization’s processes aligned with its technological capabilities?</label>
+            <select class="form-select" id="q10" required>
+                <option value="1">Not Aligned</option>
+                <option value="2">Slightly Aligned</option>
+                <option value="3">Moderately Aligned</option>
+                <option value="4">Very Aligned</option>
+                <option value="5">Completely Aligned</option>
+            </select>
+        </div>
+
+        <div id="question-11" class="question">
+            <label for="q11">How often does your organization evaluate and optimize its processes to integrate new technologies?</label>
+            <select class="form-select" id="q11" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Occasionally</option>
+                <option value="4">Frequently</option>
+                <option value="5">Always</option>
+            </select>
+        </div>
+
+        <div id="question-12" class="question">
+            <label for="q12">What challenges do you face in integrating new technologies into your existing processes?</label>
+            <select class="form-select" id="q12" required>
+                <option value="1">High Costs</option>
+                <option value="2">Lack of Skilled Personnel</option>
+                <option value="3">Resistance to Change</option>
+                <option value="4">Inadequate Infrastructure</option>
+                <option value="5">Other</option>
+            </select>
+        </div>
+
+        <!-- Section 5: Financial Resources and Investment -->
+        <div id="question-13" class="question">
+            <label for="q13">How would you rate the importance of financial investment in technology for SMEs?</label>
+            <select class="form-select" id="q13" required>
+                <option value="1">Not Important</option>
+                <option value="2">Slightly Important</option>
+                <option value="3">Moderately Important</option>
+                <option value="4">Very Important</option>
+                <option value="5">Extremely Important</option>
+            </select>
+        </div>
+
+        <div id="question-14" class="question">
+            <label for="q14">How much of your organization’s budget is allocated to technological advancements?</label>
+            <select class="form-select" id="q14" required>
+                <option value="1">Less than 10%</option>
+                <option value="2">10-20%</option>
+                <option value="3">20-30%</option>
+                <option value="4">30-40%</option>
+                <option value="5">More than 40%</option>
+            </select>
+        </div>
+
+        <div id="question-15" class="question">
+            <label for="q15">How often does your organization secure external funding or investments for technology-related projects?</label>
+            <select class="form-select" id="q15" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Occasionally</option>
+                <option value="4">Frequently</option>
+                <option value="5">Always</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-3" id="nextBtn">Next</button>
+    </form>
+    <div id="result" class="mt-4 text-center" style="display:none;">
+        <h4>Your Technical Maturity Level is: <span id="maturityLevel"></span></h4>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentQuestion = 1;
+        const totalQuestions = 15;  // Total number of questions
+        let totalScore = 0;
+
+        document.getElementById("nextBtn").addEventListener("click", function() {
+            const currentSelect = document.getElementById(`q${currentQuestion}`);
+            const currentScore = parseInt(currentSelect.value);
+            totalScore += currentScore;
+
+            if (currentQuestion < totalQuestions) {
+                document.getElementById(`question-${currentQuestion}`).classList.remove("active");
+                currentQuestion++;
+                document.getElementById(`question-${currentQuestion}`).classList.add("active");
+            } else {
+                document.getElementById("maturityForm").style.display = "none";
+                const maturityLevel = calculateMaturityLevel(totalScore);
+                document.getElementById("maturityLevel").textContent = maturityLevel;
+                document.getElementById("result").style.display = "block";
+            }
+        });
+
+        function calculateMaturityLevel(score) {
+            if (score <= 15) return "Very Low";
+            if (score <= 30) return "Low";
+            if (score <= 45) return "Moderate";
+            if (score <= 60) return "High";
+            return "Very High";
+        }
+    });
+</script>
+
+</body>
+</html>
