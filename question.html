@@ -23,6 +23,11 @@
         .question.active {
             display: block;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -206,7 +211,11 @@
         <h4>Your Technical Maturity Level is: <span id="maturityLevel"></span></h4>
     </div>
 </div>
-
+<div class="container">
+  <div class="button-container">
+      <a href="result.html" class="btn btn-primary btn-lg">Read this framework</a>
+  </div>
+</div>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         let currentQuestion = 1;
